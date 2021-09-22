@@ -17,5 +17,5 @@ public class RecordingDto {
     String title;
     String version;
     ZonedDateTime releaseTime;
-    List<SingerDto> singers;
+    SingerDto singer;
 }

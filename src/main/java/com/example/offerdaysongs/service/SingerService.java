@@ -1,5 +1,6 @@
 package com.example.offerdaysongs.service;
 
+import com.example.offerdaysongs.dto.requests.CreateSingerRequest;
 import com.example.offerdaysongs.model.Singer;
 import com.example.offerdaysongs.repository.SingerRepository;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,11 @@ public class SingerService {
     public Singer getById(long id)
     {
         return singerRepository.getById(id);
+    }
+
+    public Singer create(CreateSingerRequest request) {
+        Singer singer = new Singer();
+        singer.setName(request.getName());
+        return singerRepository.save(singer);
     }
 }
