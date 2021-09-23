@@ -44,8 +44,6 @@ public class SingerController {
         return convertToDto(signerService.create(request));
     }
 
-
-
     private SingerDto convertToDto(Singer singer)
     {
         return new SingerDto(singer.getId(), singer.getName());

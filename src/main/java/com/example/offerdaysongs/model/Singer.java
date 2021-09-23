@@ -13,5 +13,6 @@ public class Singer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
+
     String name;
 }
